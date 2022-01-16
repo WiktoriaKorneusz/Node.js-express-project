@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANIMEme</title>
+    
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/recommend.css" />
+    <script src="scripts/responsive.js" defer></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <div id="logo"><a href="index.html">ANIMEme</a></div>
+      <nav>
+        <ul>
+          <li class="nav-item">
+            <a href="anime.html">Browse Anime</a>
+          </li>
+          <li class="nav-item">
+            <a href="/">Share Anime</a>
+          </li>
+          <li class="nav-item"><a href="about.html">About ANIMEme</a></li>
+        </ul>
+      </nav>
+      <button id="drawer-btn">
+      </button>
+    </header>
+    
+    <main>
+      <h1>Share your favorite Anime!</h1>
+      <form>
+        <div class="form-control">
+          <label for="name">Anime name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-control">
+          <label for="type">Type</label>
+          <input type="text" id="type" name="type" placeholder="e.g. Movie, Ova" required />
+        </div>
+        <div class="form-control">
+          <label for="genre">Genre</label>
+          <input
+            type="text"
+            id="genre"
+            name="genre"
+            placeholder="e.g. Shounen, Fantasy"
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label for="website">Link to My Anime List page about this Anime</label>
+          <input type="url" id="website" name="website" />
+        </div>
+        <div class="form-control">
+          <label for="description">Why do you recommend it?</label>
+          <textarea
+            name="description"
+            id="description"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+        <button>Share Anime</button>
+      </form>
+    </main>
+  </body>
+</html>
