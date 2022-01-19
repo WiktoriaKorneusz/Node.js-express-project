@@ -1,3 +1,93 @@
-body{
-    background: red;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header, main{
+    max-width: 1500px;
+    box-sizing: border-box;
+}
+
+header{
+    border-bottom: solid 1px #f1effd86;
+}
+
+.header-open{
+    position: sticky;
+    top: 0;
+}
+
+#drawer-btn {
+    position: relative;
+}
+
+.burger {
+    width: 50%;
+    height: 15%;
+    display: block;
+    background: #f1effd;
+    position: absolute;
+    border-radius: 1rem;
+    transition: width 0.3s, transform 0.3s, opacity 0.3s, left .3s;
+    top: 12.5%;
+    right: 0;
+    
+}
+
+.burger::before {
+    width: 200%;
+    position: absolute;
+    content: "";
+    height: 100%;
+    background: inherit;
+    transition: inherit;
+    border-radius: inherit;
+    right: 0;
+    top: 200%;
+}
+
+.burger::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: inherit;
+    border-radius: inherit;
+    transition: inherit;
+    right: 100%;
+    position: absolute;
+    top: 400%;
+    
+}
+
+.open .burger {
+    transform: rotate(585deg) ;
+    width: 100%;
+    top: 40%;
+}
+
+.open .burger::before {
+    width: 0;
+    opacity: 0;
+}
+
+.open .burger::after {
+    transform: rotate(90deg);
+    left: 0;
+    top: 0;
+}
+nav{
+    left: 100%;
+    transition: left .3s;
+    height: calc(100vh - 6rem);
+}
+
+.nav-open{
+    left: 0;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+#anime-list li img{
+    max-width: 225px;
 }

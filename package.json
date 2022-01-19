@@ -1,12 +1,17 @@
 {
-  "name": "animeme",
-  "version": "1.0.0",
-  "description": "",
-  "main": "tailwind.config.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "animeme",
+    "version": "1.0.0",
+    "description": "",
+    "main": "tailwind.config.js",
+    "scripts": {
+        "watch": "sass --watch src/style:src/style",
+        "tailwind": "npx tailwindcss -i ./src/style/style.scss -o ./src/style/tailwind.css -w" 
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "sass": "^1.48.0",
+        "tailwindcss": "^3.0.15"
+    }
 }
