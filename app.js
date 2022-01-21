@@ -9,6 +9,7 @@ const fetch = require("node-fetch");
 const url1 = `https://api.jikan.moe/v3/search/anime?q=`;
 const url2 = `&page=1`;
 
+//setting up ejs templating
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
@@ -17,15 +18,15 @@ app.use(express.static(__dirname + "/public"));
 
 app.use(express.urlencoded({ extended: false }));
 
-//routes
+//routes and rendering
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("index"); 
 });
 app.get("/about", (req, res) => {
     res.render("about");;
 });
 app.get("/recommend", (req, res) => {
-    res.render("recommend");
+    res.render("recommend"); 
 });
 app.get("/anime", (req, res) => {
     //path to data storage
@@ -33,6 +34,7 @@ app.get("/anime", (req, res) => {
     const fileData = fs.readFileSync(filePath);
     const storedAnime = JSON.parse(fileData);
 
+    //rendering anime list with variables
     res.render("anime", {num: storedAnime.length, animeList: storedAnime});
 });
 app.get("/confirm", (req, res) => {

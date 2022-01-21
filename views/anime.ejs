@@ -1,45 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ANIMEme</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="style/style.css" />
-        <link rel="stylesheet" href="style/tailwind.css" />
-        <link rel="icon" href="img/logo.svg"  />
-
-
-        <script src="scripts/index.js" defer></script>
+        <%- include("includes/head") %> 
     </head>
     <body class="bg-body text-txt font-sans overflow-x-hidden">
-        <header class="flex h-24 relative items-center justify-between px-2.5 py-2 bg-body w-screen mx-auto px-4 ">
-            <a href="/" class="flex font-bold items-center gap-2" id="logo">
-                <img class="w-16" src="img/logo.svg" alt="logo" />
-                <span class="font-monsterrat">ANIMEme</span>
-            </a>
-            
-            <nav class="absolute bg-body w-screen top-full  sm:static  sm:h-min sm:top-0 sm:w-96">
-               
-                <ul class="flex gap-2 flex-col justify-center align-center text-center block  h-96 sm:flex-row  sm:h-min sm:justify-end sm:gap-8">
-                    <li class="nav-item">
-                        <a href="/anime">Browse Anime</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/recommend">Share Anime</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/about">About ANIMEme</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        <%- include("includes/header") %>
+
         <main class=" mx-auto mt-12 px-8 text-center">
             <form id="search" action="" class="mb-8">
                 <input type="text" id="search" placeholder="Search" name="search" placeholder="Search" class="bg-txt p-1 text-body">
@@ -55,40 +21,9 @@
             <% } %> 
             <ul id="anime-list">
                 <% for (const anime of animeList.reverse()) {%> 
-                <li class="anime-item flex flex-col max-w-xl mx-auto justify-center items-center border-b-2 border-txt mb-4 gap-4 sm:flex-row sm:max-w-7xl pb-2">
-                    <img src="<%= anime.img %>" alt="imageNotFound">
-                    <article class="">
-                        <h2 class="text-3xl font-bold"><%= anime.name %></h2>
-                        <div class="anime-meta">
-                            <p><%= anime.type %></p>
-                            <p><%= anime.genre %></p>
-                        </div>
-                        <p>
-                            <%= anime.description %>
-                        </p>
-                        <div class="restaurant-actions">
-                            <a href="<%= anime.website %>" target="_blank" class="bg-pink  w-full block py-4 text-lg font-monsterrat font-bold hover:bg-darkpink max-w-md mx-auto mt-4 mb-4">Go to MyAnimeList</a>
-                        </div>
-                    </article>
-                </li>
+                <%- include("includes/animeItem", {anime: anime}) %> 
                 <% } %> 
-                <!-- <li class="anime-item  flex flex-col max-w-xl mx-auto justify-center items-center border-b-2 border-txt mb-4 gap-4 sm:flex-row sm:max-w-7xl pb-2">
-                    <img src="img/imageNotFound.png" alt="imageNotFound">
-                    <article class="">
-                        <h2 class="text-3xl font-bold">Anime Title</h2>
-                        <div class="anime-meta">
-                            <p>type</p>
-                            <p>genre</p>
-                        </div>
-                        <p>
-                            A short description, explaining why this anime is
-                            awesome!
-                        </p>
-                        <div class="restaurant-actions">
-                            <a href="" class="bg-pink  w-full block py-4 text-lg font-monsterrat font-bold hover:bg-darkpink max-w-md mx-auto mt-4 mb-4">Go to MyAnimeList</a>
-                        </div>
-                    </article>
-                </li> -->
+                
                 
             </ul>
         </main>
