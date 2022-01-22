@@ -7,17 +7,17 @@
         <%- include("includes/header") %>
 
         <main class=" mx-auto mt-12 px-8 text-center">
-            <form id="search" action="" class="mb-8">
-                <input type="text" id="search" placeholder="Search" name="search" placeholder="Search" class="bg-txt p-1 text-body">
-
-                <input type="submit" id="submit" name="submit" value="&#x1F50D" class="bg-txt p-1 cursor-pointer">
-            </form>
+            
+                <input type="text" class="rounded-l-lg mb-8 bg-txt p-1 text-body" id="search" placeholder="Search" name="search" placeholder="Search" class="bg-txt p-1 text-body">
+                <button id="search-btn"class="rounded-r-lg bg-txt p-1 cursor-pointer">🔍</button>
+                <!-- <input type="submit" id="submit" name="submit" value="&#x1F50D" class="bg-txt p-1 cursor-pointer"> -->
+            
             <h1 class="font-monsterrat font-bold text-4xl mb-3 text-pink ">Recommended Anime</h1>
             <% if (num === 0 ) {%> 
             <p class="mb-4">There is no Anime available.</p>
             <% } else { %> 
-            <p class="mb-4">Find your next favorite Anime with help of our other users!</p>
-            <p class="mb-12"> there are <%= num %> anime</p>
+            <p class="">Find your next favorite Anime with help of our other users!</p>
+            <p class="mb-12"> We found <span class="num"><%= num %></span> anime</p>
             <% } %> 
             <ul id="anime-list">
                 <% for (const anime of animeList.reverse()) {%> 
@@ -26,6 +26,7 @@
                 
                 
             </ul>
+            <script src="scripts/search.js"></script>
         </main>
     </body>
 </html>

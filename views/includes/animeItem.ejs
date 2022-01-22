@@ -3,23 +3,23 @@
 >
     <img src="<%= anime.img %>" alt="imageNotFound" />
     <article class="w-full">
-        <h2 class="text-3xl font-bold"><%= anime.name %></h2>
+        <h2 class="anime-name text-3xl font-bold sm:text-left"><%= anime.name %></h2>
         <div class="anime-meta">
-            <p><%= anime.type %></p>
-            <p><%= anime.genre %></p>
+            <p class="sm:text-left"><%= anime.type %></p>
+            <p class="sm:text-left"><%= anime.genre %></p>
         </div>
-        <p><%= anime.description %></p> 
+        <p class="sm:text-left mb-8"><%= anime.description %></p> 
         <div class="restaurant-actions">
             <a
                 href="<%= anime.website %>"
                 target="_blank"
-                class="bg-pink w-full block py-4 text-lg font-monsterrat font-bold hover:bg-darkpink max-w-md mx-auto mt-4 mb-4"
+                class="bg-pink w-full block py-4 text-base font-monsterrat font-bold hover:bg-darkpink max-w-sm mx-auto mt-4 mb-4 sm:mr-0 sm:ml-auto"
                 >Go to MyAnimeList</a
             >
-            <a
+            <a 
                 href="/"
                 target="_blank"
-                class="bg-pink w-full block py-4 text-lg font-monsterrat font-bold hover:bg-darkpink max-w-md mx-auto mt-4 mb-4"
+                class="bg-pink w-full block py-4 text-base font-monsterrat font-bold hover:bg-darkpink max-w-sm mx-auto mt-4 mb-4 sm:mr-0 sm:ml-auto"
                 >Read more</a
             >
         </div>

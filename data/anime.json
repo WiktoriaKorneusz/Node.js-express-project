@@ -1,44 +1,54 @@
 [
     {
+        "name": "Ousama Ranking",
+        "type": "TV",
+        "genre": "fantasy",
+        "website": "https://myanimelist.net/anime/40834/Ousama_Ranking?q=ousama&cat=anime",
+        "description": "This anime is real masterpiece. From music to animation, everything is perfect. Characters are great, and well written, openings (especially second one) are catchy. Art style might confuse, but it is definitely not a show for kids.",
+        "img": "https://cdn.myanimelist.net/images/anime/1347/117616.jpg?s=1fc7d9cfcad3dfca1cee2e11b5b74ef4",
+        "start": "2021-10-15",
+        "end": "N/A",
+        "rate": "PG-13",
+        "score": 8.85,
+        "episodes": 23
+    },
+    {
         "name": "Made in Abyss",
         "type": "TV",
         "genre": "fantasy",
         "website": "https://myanimelist.net/anime/34599/Made_in_Abyss",
         "description": "This anime is great. the plot is original, characters and great and easy to identify with, the art is stunning and the music is awesome. This anime deserves 10/10",
-        "img": "https://cdn.myanimelist.net/images/anime/6/86733.jpg?s=56ac623880ec87f3a0197e0391bc12c3"
-    },
-    {
-        "name": "ousama ranking",
-        "type": "TV",
-        "genre": "fantasy",
-        "website": "https://myanimelist.net/anime/40834/Ousama_Ranking?q=ousama&cat=anime",
-        "description": "This anime is real masterpiece. From music to animation, everything is perfect. Characters are great, and well written, openings (especially second one) are catchy. Art style might confuse, but it is definitely not a show for kids.",
-        "img": "https://cdn.myanimelist.net/images/anime/1347/117616.jpg?s=1fc7d9cfcad3dfca1cee2e11b5b74ef4"
-    },
-    {
-        "name": "Made in Abyss",
-        "type": "TV",
-        "genre": "fantasy",
-        "website": "https://myanimelist.net/anime/34599/Made_in_Abyss",
-        "description": "cool",
         "img": "https://cdn.myanimelist.net/images/anime/6/86733.jpg?s=56ac623880ec87f3a0197e0391bc12c3",
-        "start": "2017-07-07T00:00:00+00:00",
-        "end": "2017-09-29T00:00:00+00:00",
+        "start": "2017-07-07",
+        "end": "2017-09-29",
         "rate": "R",
         "score": 8.69,
         "episodes": 13
     },
     {
-        "name": "Made in Abyss",
+        "name": "Shingeki no Bahamut: Virgin Soul",
         "type": "TV",
         "genre": "fantasy",
-        "website": "https://myanimelist.net/anime/34599/Made_in_Abyss",
-        "description": "zddzsdz",
-        "img": "https://cdn.myanimelist.net/images/anime/6/86733.jpg?s=56ac623880ec87f3a0197e0391bc12c3",
-        "start": "2017-07-07T",
-        "end": "2017-09-29T",
+        "website": "https://myanimelist.net/anime/30736/Shingeki_no_Bahamut__Virgin_Soul?q=shingeki%20no%20baha&cat=anime",
+        "description": "Shingeki no Bahamut serie (both genesis and virgin soul) are game adaptations, that are actually not bad. Characters are nice, (except Charicet), story is nice and original. It isn't isekai ecchi or harem. It is pure fantasy with great music (especially second opening is great!). If you like fantasy I'm sure it is anime for you!",
+        "img": "https://cdn.myanimelist.net/images/anime/13/85564.jpg?s=c784fde4b8a8adafbb74a9ebc0c0ab5b",
+        "start": "2017-04-08",
+        "end": "2017-09-30",
         "rate": "R",
-        "score": 8.69,
-        "episodes": 13
+        "score": 7.43,
+        "episodes": 24
+    },
+    {
+        "name": "One Punch Man",
+        "type": "TV",
+        "genre": "action",
+        "website": "https://myanimelist.net/anime/30276/One_Punch_Man",
+        "description": "If you're tired of superhero movies, if you're looking for good comedy, if you're looking for the great parody, One Punch Man is for you. Anime is interesting and funny. Animation is perfect, battle scenes are awesome, and main character is the best. Go watch OPM!",
+        "img": "https://cdn.myanimelist.net/images/anime/12/76049.jpg?s=40b6c7dbbbb94c44675116d301150078",
+        "start": "2015-10-05",
+        "end": "2015-12-21",
+        "rate": "R",
+        "score": 8.52,
+        "episodes": 12
     }
 ]

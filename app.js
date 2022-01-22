@@ -22,11 +22,14 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
     res.render("index"); 
 });
+app.get("/test", (req, res) => {
+    res.render("individualAnime"); 
+});
 app.get("/about", (req, res) => {
     res.render("about");;
 });
 app.get("/recommend", (req, res) => {
-    res.render("recommend"); 
+    res.render("recommend");  
 });
 app.get("/anime", (req, res) => {
     //path to data storage
@@ -65,7 +68,19 @@ app.post("/recommend", async (req, res) => {
         );
         //adding image data to animeData
         if (anime) {
-            animeParams = { ...animeData, img: anime.image_url, start: anime.start_date.slice(0,10), end: anime.end_date.slice(0,10), rate: anime.rated, score: anime.score, episodes: anime.episodes};
+            let startDate, endDate;
+            if(!anime.end_date){
+                endDate = "N/A";
+            } else {
+                endDate = anime.end_date.slice(0,10)
+            }
+            if(!anime.start_date){
+                startDate = "N/A";
+            } else {
+                startDate = anime.start_date.slice(0,10)
+            }
+            animeParams = { ...animeData, img: anime.image_url, start: startDate, end: endDate, rate: anime.rated, score: anime.score, episodes: anime.episodes};
+
         } else {
             animeParams = { ...animeData, img: "img/imageNotFound.png", start: "N/A", end: "N/A", rate: "N/A", score: "N/A", episodes: "N/A" };
         }

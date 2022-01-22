@@ -485,6 +485,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
@@ -493,36 +498,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.mb-16 {
-  margin-bottom: 4rem;
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .mt-24 {
   margin-top: 6rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .block {
@@ -531,6 +536,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .h-24 {
@@ -545,6 +554,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 2.5rem;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -557,16 +570,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2.5rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .max-w-md {
   max-width: 28rem;
 }
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.resize-none {
+  resize: none;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -585,16 +614,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
-.gap-2 {
-  gap: 0.5rem;
+.justify-items-center {
+  justify-items: center;
 }
 
 .gap-4 {
   gap: 1rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.rounded-l-lg {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-r-lg {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .border-b-2 {
@@ -611,9 +654,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(37 40 73 / var(--tw-bg-opacity));
 }
 
+.bg-txt {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 239 253 / var(--tw-bg-opacity));
+}
+
 .bg-pink {
   --tw-bg-opacity: 1;
   background-color: rgb(240 79 145 / var(--tw-bg-opacity));
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .px-2\.5 {
@@ -636,18 +698,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.5rem;
 }
 
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -672,6 +728,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -688,6 +754,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-pink {
   --tw-text-opacity: 1;
   color: rgb(240 79 145 / var(--tw-text-opacity));
+}
+
+.text-body {
+  --tw-text-opacity: 1;
+  color: rgb(37 40 73 / var(--tw-text-opacity));
 }
 
 header, main{
@@ -794,6 +865,14 @@ a:hover{
     top: 0px;
   }
 
+  .sm\:mr-0 {
+    margin-right: 0px;
+  }
+
+  .sm\:ml-auto {
+    margin-left: auto;
+  }
+
   .sm\:hidden {
     display: none;
   }
@@ -812,14 +891,16 @@ a:hover{
     max-width: 80rem;
   }
 
-  .sm\:flex-row {
-    flex-direction: row;
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (min-width: 640px) {
-    .sm\:sm\:flex-row {
-      flex-direction: row;
-    }
+  .sm\:grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
   }
 
   .sm\:justify-end {
@@ -828,5 +909,9 @@ a:hover{
 
   .sm\:gap-8 {
     gap: 2rem;
+  }
+
+  .sm\:text-left {
+    text-align: left;
   }
 }
