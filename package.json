@@ -5,7 +5,7 @@
     "main": "tailwind.config.js",
     "scripts": {
         "watch": "sass --watch src/style:src/style",
-        "tailwind": "npx tailwindcss -i ./src/style/style.scss -o ./src/style/tailwind.css -w",
+        "tailwind": "npx tailwindcss -i ./public/style/style.scss -o ./public/style/tailwind.css -w",
         "start": "nodemon app.js"
     },
     "keywords": [],

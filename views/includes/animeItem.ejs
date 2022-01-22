@@ -2,19 +2,25 @@
     class="anime-item flex flex-col max-w-xl mx-auto justify-center items-center border-b-2 border-txt mb-4 gap-4 sm:flex-row sm:max-w-7xl pb-2"
 >
     <img src="<%= anime.img %>" alt="imageNotFound" />
-    <article class="">
+    <article class="w-full">
         <h2 class="text-3xl font-bold"><%= anime.name %></h2>
         <div class="anime-meta">
             <p><%= anime.type %></p>
             <p><%= anime.genre %></p>
         </div>
-        <p><%= anime.description %></p>
+        <p><%= anime.description %></p> 
         <div class="restaurant-actions">
             <a
                 href="<%= anime.website %>"
                 target="_blank"
                 class="bg-pink w-full block py-4 text-lg font-monsterrat font-bold hover:bg-darkpink max-w-md mx-auto mt-4 mb-4"
                 >Go to MyAnimeList</a
+            >
+            <a
+                href="/"
+                target="_blank"
+                class="bg-pink w-full block py-4 text-lg font-monsterrat font-bold hover:bg-darkpink max-w-md mx-auto mt-4 mb-4"
+                >Read more</a
             >
         </div>
     </article>

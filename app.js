@@ -57,17 +57,20 @@ app.post("/recommend", async (req, res) => {
     const list = data.results;
 
     //finding the anime
-    const anime = list.find(
-        (anime) => anime.title.toLowerCase() == animeData.name.toLowerCase()
-    );
-
-    //adding image data to animeData
     let animeParams;
-    if (anime) {
-        animeParams = { ...animeData, img: anime.image_url };
-    } else {
-        animeParams = { ...animeData, img: "img/imageNotFound.png" };
+    if (list){
+
+        const anime = list.find(
+            (anime) => anime.title.toLowerCase() == animeData.name.toLowerCase()
+        );
+        //adding image data to animeData
+        if (anime) {
+            animeParams = { ...animeData, img: anime.image_url, start: anime.start_date.slice(0,10), end: anime.end_date.slice(0,10), rate: anime.rated, score: anime.score, episodes: anime.episodes};
+        } else {
+            animeParams = { ...animeData, img: "img/imageNotFound.png", start: "N/A", end: "N/A", rate: "N/A", score: "N/A", episodes: "N/A" };
+        }
     }
+
 
     //pushing data to storage
     storedAnime.push(animeParams);

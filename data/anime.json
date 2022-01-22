@@ -14,5 +14,31 @@
         "website": "https://myanimelist.net/anime/40834/Ousama_Ranking?q=ousama&cat=anime",
         "description": "This anime is real masterpiece. From music to animation, everything is perfect. Characters are great, and well written, openings (especially second one) are catchy. Art style might confuse, but it is definitely not a show for kids.",
         "img": "https://cdn.myanimelist.net/images/anime/1347/117616.jpg?s=1fc7d9cfcad3dfca1cee2e11b5b74ef4"
+    },
+    {
+        "name": "Made in Abyss",
+        "type": "TV",
+        "genre": "fantasy",
+        "website": "https://myanimelist.net/anime/34599/Made_in_Abyss",
+        "description": "cool",
+        "img": "https://cdn.myanimelist.net/images/anime/6/86733.jpg?s=56ac623880ec87f3a0197e0391bc12c3",
+        "start": "2017-07-07T00:00:00+00:00",
+        "end": "2017-09-29T00:00:00+00:00",
+        "rate": "R",
+        "score": 8.69,
+        "episodes": 13
+    },
+    {
+        "name": "Made in Abyss",
+        "type": "TV",
+        "genre": "fantasy",
+        "website": "https://myanimelist.net/anime/34599/Made_in_Abyss",
+        "description": "zddzsdz",
+        "img": "https://cdn.myanimelist.net/images/anime/6/86733.jpg?s=56ac623880ec87f3a0197e0391bc12c3",
+        "start": "2017-07-07T",
+        "end": "2017-09-29T",
+        "rate": "R",
+        "score": 8.69,
+        "episodes": 13
     }
 ]
