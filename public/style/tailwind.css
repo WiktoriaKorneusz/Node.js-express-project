@@ -485,6 +485,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -654,14 +659,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(37 40 73 / var(--tw-bg-opacity));
 }
 
-.bg-txt {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 239 253 / var(--tw-bg-opacity));
-}
-
 .bg-pink {
   --tw-bg-opacity: 1;
   background-color: rgb(240 79 145 / var(--tw-bg-opacity));
+}
+
+.bg-txt {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 239 253 / var(--tw-bg-opacity));
 }
 
 .p-1 {
