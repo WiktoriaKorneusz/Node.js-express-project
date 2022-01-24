@@ -17,10 +17,22 @@
             <p class="mb-4">There is no Anime available.</p>
             <% } else { %> 
             <p class="">Find your next favorite Anime with help of our other users!</p>
-            <p class="mb-12"> We found <span class="num"><%= num %></span> anime</p>
+            <p class="mb-2"> We found <span class="num text-pink font-bold"><%= num %></span> anime</p>
+            <p>sort by</p>
+            <form action="/anime" method="GET">
+                <select name="sort" id="sort" class="mb-4 bg-txt text-body p-1 px-4 text-base">
+                    <option value="1" selected>Newest to Oldest</option>
+                    <option value="2">Oldest to Newest</option>
+                    <option value="3">Name (ascending)</option>
+                    <option value="4">Name (descending)</option>
+                </select>
+                <button type="submit" class="bg-pink w-full block py-2 text-base font-monsterrat font-bold hover:bg-darkpink max-w-sm mx-auto  mb-12 w-52">Sort</button>
+            </form>
+            
             <% } %> 
+            
             <ul id="anime-list">
-                <% for (const anime of animeList.reverse()) {%> 
+                <% for (const anime of animeList) {%> 
                 <%- include("includes/animeItem", {anime: anime}) %> 
                 <% } %> 
                 
