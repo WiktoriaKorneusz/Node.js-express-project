@@ -1,5 +1,4 @@
 const express = require("express");
-
 const animeFile = require("../utilities/anime-file")
 const uuid = require("uuid");
 const fetch = require("node-fetch");
@@ -14,6 +13,7 @@ router.get("/recommend", (req, res) => {
     res.render("recommend");
 });
 
+//posting sorted anime
 router.get("/anime", (req, res) => {
     let sort = req.query.sort;
     if (!sort) {
@@ -22,19 +22,21 @@ router.get("/anime", (req, res) => {
     //path to data storage
     const storedAnime = animeFile.getAnimeData();
 
-    //sorting via index (from newest to oldest)
-    // storedAnime.sort( (a, b) => a.index > b.index ? -1 : 1);
     switch(sort){
         case "1":
+            //sorting via index (from newest to oldest)
             storedAnime.sort( (a, b) => a.index > b.index ? -1 : 1);
             break;
-        case "2":
+        case "2":            
+            //sorting via index (from oldest to newest)
             storedAnime.sort( (a, b) => a.index > b.index ? 1 : -1);
             break;
         case "3":
+            //sorting via name (ascending)
             storedAnime.sort( (a, b) => a.name > b.name ? 1 : -1);
             break;
         case "4":
+            //sorting via name (descending)
             storedAnime.sort( (a, b) => a.name > b.name ? -1 : 1);
             break;
             
@@ -45,8 +47,9 @@ router.get("/anime", (req, res) => {
     res.render("anime", { num: storedAnime.length, animeList: storedAnime });
 });
 
+//individual anime page
 router.get("/anime/:id", (req, res) => {
-    //path to data.json
+    //getting anime list
     const storedAnime = animeFile.getAnimeData();
 
     const animeId = req.params.id;
@@ -58,6 +61,7 @@ router.get("/anime/:id", (req, res) => {
     }
 });
 
+//confirm page
 router.get("/confirm", (req, res) => {
     res.render("confirm");
 });
@@ -66,12 +70,15 @@ router.get("/confirm", (req, res) => {
 router.post("/recommend", async (req, res) => {
     //form data
     const animeData = req.body;
-    animeData.id = uuid.v4();
-    //path to data.json
 
+    //adding individual id
+    animeData.id = uuid.v4();
+
+    //getting anime json file
     const storedAnime = animeFile.getAnimeData();
     const index = storedAnime.length;
-    //fetching anime
+
+    //fetching anime from  Jikan API
     const response = await fetch(url1 + animeData.name + url2);
     const data = await response.json();
     const list = data.results;
@@ -82,7 +89,7 @@ router.post("/recommend", async (req, res) => {
         const anime = list.find(
             (anime) => anime.title.toLowerCase() == animeData.name.toLowerCase()
         );
-        //adding image data to animeData
+        //adding data to animeData if anime if found in list
         if (anime) {
             let startDate, endDate;
             if (!anime.end_date) {

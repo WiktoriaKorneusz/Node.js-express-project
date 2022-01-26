@@ -16,16 +16,21 @@ app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: false }));
 
 //routes and rendering
-
 app.use("/", defaultRoutes)
 app.use("/", animeRoutes)
 
+//404 page
 app.use((req, res) => {
     res.status(404).render("404");
 });
+
+//500 page
 app.use((error, req, res, next) => {
     res.status(500).render("500");
 });
 
+//setting up port
 app.listen(3000);
+
+//logging lh link to just ctrl + click to open
 console.log("http://localhost:3000/");
